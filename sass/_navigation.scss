@@ -1,3 +1,61 @@
 .navigation {
   background-color: $primary-color-dark;
+  grid-column: full-start / full-end;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+
+  &__nav {
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    color: #ffffff;
+    font-weight: 500;
+    z-index: 20;
+  }
+
+  &__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $secondary-color;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+    z-index: -1;
+  }
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: $secondary-color;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.5rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: $light-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+  }
 }
