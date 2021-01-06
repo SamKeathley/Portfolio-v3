@@ -1,0 +1,45 @@
+// FONT VARIABLES
+$font-primary: 'Raleway', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-code: 'Source Code Pro', monospace;
+
+// COLOR VARIABLES
+$primary-color: #18121e;
+$primary-color-dark: #000000;
+$secondary-color: #984b43;
+$accent-color-1: #eac678;
+$accent-color-2: #233237;
+$light-color: #eeeeee;
+$light-color-2: #d4d4d4;
+
+// SCREEN SIZES
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  color: $light-color;
+  line-height: 1.6;
+  background-color: $primary-color;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh;
+}
