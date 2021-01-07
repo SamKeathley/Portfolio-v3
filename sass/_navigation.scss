@@ -1,14 +1,11 @@
 .navigation {
-  background-color: $primary-color-dark;
+  background-color: $primary-color;
   grid-column: full-start / full-end;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 6rem;
-
-  &__nav {
-  }
+  padding: 4rem 6rem;
 
   &__list {
     list-style: none;
